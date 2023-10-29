@@ -6,6 +6,9 @@ from time import sleep
 from discord import Embed
 from discord.ext import commands
 from datetime import datetime
+from dotenv import load_dotenv
+load_dotenv()
+
 
 images = os.listdir("src")
 
@@ -75,5 +78,4 @@ async def on_message(message):
     await old_embed.edit(embed=embed2)
 
 
-
-bot.run("MTE2Nzg3NTEyOTQ3NzQ0Nzg2Mg.GHfQJQ.IcgjOfSu0qaYS6OtKcs7aHBzHB2f3BgaUo2JzE")
+bot.run(os.getenv('TOKEN'))
